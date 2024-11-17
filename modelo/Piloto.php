@@ -13,12 +13,13 @@ class Piloto extends Base implements IDados{
     private string $nacionalidade;
 
     //Métodos
-    public function __construct($a = 0, $b = " ", $c = 0, $d = " ")
+    public function __construct($a =  " ", $b = 0, $c = " ", $d = 0, $e = " ")
     {
-        $this->numero = $a;
-        $this->equipe = $b;
-        $this->idade = $c;
-        $this->nacionalidade = $d;
+        $this->nome =  $a;
+        $this->numero = $b;
+        $this->equipe = $c;
+        $this->idade = $d;
+        $this->nacionalidade = $e;
     }
 
     public function getDados()

@@ -7,10 +7,15 @@ require_once("modelo/Piloto.php");
 //Cadastrar as 4 Equipes
 $equipe1 = new Equipe("Scuderia Ferrari HP", 1950, "Frédéric Vasseur", "Italiano");
 $equipe2 = New Equipe("Mercedes-AMG Petronas Formula One Team", 1954, "Toto Wolff", "Alemão");
-$equipe3 = New Equipe("McLaren F1 Team", )
+$equipe3 = New Equipe("McLaren F1 Team", 1966, "Andrea Stella", "Britânico");
+$equipe4 = new Equipe("Oracle Red Bull Racing", 2005, "Christian Horner", "Austríaco");
 
 
 //Cadastrar os 4 pilotos
+$piloto1 = new Piloto("Charles Leclerc", 16, $equipe1, 27, "Monegasco");
+$piloto2 = new Piloto("Lewis Hamilton", 44, $equipe2, 39, "Britânico");
+$piloto3 = new Piloto("Oscar Piastri",81, $equipe3, 23, "Australiano");
+$piloto4 = new Piloto("Max Verstappen", 1, $equipe4, 27, "Neerlandês");
 
 //Laço do Menu (do-while)
 $escolha = 0;
