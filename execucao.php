@@ -102,6 +102,11 @@ do {
             //Jogo
             echo "\n-----\n";
             echo "Você escolheu o Modo Corrida.\n";
+            //Setando informações da pista
+            $pista = new Corrida("Silverstone", 52, 1950, "Inglaterra");
+            echo "\n-----\n";
+            echo $pista->getDados();
+            echo "-----\n";
 
             //Sorteio das posições da largada
             foreach ($pilotos as $objetoP) {
@@ -207,4 +212,3 @@ do {
             break;
     }
 } while ($escolha != 0 and $escolha != 7);
-
