@@ -6,7 +6,6 @@ require_once("Base.php");
 class Corrida extends Base implements IDados {
 
     private int $voltas;
-    private string $pneu;
     private int $posicao;
 
     public function getDados()
@@ -34,23 +33,6 @@ class Corrida extends Base implements IDados {
         return $this;
     }
 
-    /**
-     * Get the value of pneu
-     */
-    public function getPneu(): string
-    {
-        return $this->pneu;
-    }
-
-    /**
-     * Set the value of pneu
-     */
-    public function setPneu(string $pneu): self
-    {
-        $this->pneu = $pneu;
-
-        return $this;
-    }
 
     /**
      * Get the value of posicao
