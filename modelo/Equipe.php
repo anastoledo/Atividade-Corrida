@@ -5,12 +5,9 @@ require_once("IDados.php");
 
 class Equipe extends Base implements IDados{
     //Atributos
-    private int $anoEntrada;
     private string $chefeEquipe;
-    private string $nacionalidade;
 
     //Métodos
-
     public function __construct($a = " ", $b= 0, $c = " ", $d = " ", )
     {
         $this->nome =  $a;
@@ -21,20 +18,8 @@ class Equipe extends Base implements IDados{
     }
     public function getDados()
     {
-        return "Ano entrada: " . $this->anoEntrada . "| Chefe da equipe: " . $this->chefeEquipe . " | Nacionalidade da equipe: " . $this->nacionalidade . "\n";
+        return "Nome da equipe: " . $this->nome.  " | Ano entrada: " . $this->anoEntrada . "| Chefe da equipe: " . $this->chefeEquipe . " | Nacionalidade da equipe: " . $this->nacionalidade . "\n\n";
 
-    }
-
-
-    public function getAnoEntrada(): int
-    {
-        return $this->anoEntrada;
-    }
-
-    public function setAnoEntrada(int $anoEntrada): self
-    {
-        $this->anoEntrada = $anoEntrada;
-        return $this;
     }
 
     public function getChefeEquipe(): string
@@ -48,14 +33,4 @@ class Equipe extends Base implements IDados{
         return $this;
     }
 
-    public function getNacionalidade(): string
-    {
-        return $this->nacionalidade;
-    }
-
-    public function setNacionalidade(string $nacionalidade): self
-    {
-        $this->nacionalidade = $nacionalidade;
-        return $this;
-    }
 }

@@ -10,21 +10,22 @@ class Piloto extends Base implements IDados{
     private int $numero;
     private Equipe $equipe;
     private int $idade;
-    private string $nacionalidade;
 
     //Métodos
-    public function __construct($a = "", $b = 0, $c = "", $d = 0, $e = "")
+    public function __construct($a = "", $b = 0, $c = 0, $d = "", $e = 0, $f = "")
     {
         $this->nome =  $a;
-        $this->numero = $b;
-        $this->equipe = $c; 
-        $this->idade = $d;
-        $this->nacionalidade = $e;
+        $this->anoEntrada = $b;
+        $this->numero = $c;
+        $this->equipe = $d; 
+        $this->idade = $e;
+        $this->nacionalidade = $f;
+       
     }
 
     public function getDados()
     {
-        return "Nome: " . $this->getNome() . "| Número do piloto: " . $this->numero . " | Equipe: " . $this->getEquipe()->getNome() . "| Idade: " . $this->idade . "| Nacionalidade: " . $this->nacionalidade . "\n";
+        return "Nome: " . $this->getNome() . "| Ano de entrada do piloto: " . $this->anoEntrada.  "| Número do piloto: " . $this->numero . " | Equipe: " . $this->getEquipe()->getNome() . "| Idade: " . $this->idade . "| Nacionalidade: " . $this->nacionalidade . "\n\n";
     }
 
     public function getNumero(): int
@@ -66,16 +67,4 @@ class Piloto extends Base implements IDados{
         return $this;
     }
 
-  
-    public function getNacionalidade(): string
-    {
-        return $this->nacionalidade;
-    }
-
-    public function setNacionalidade(string $nacionalidade): self
-    {
-        $this->nacionalidade = $nacionalidade;
-
-        return $this;
-    }
 }

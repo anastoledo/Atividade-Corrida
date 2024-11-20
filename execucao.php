@@ -20,13 +20,13 @@ $equipe4 = new Equipe("Oracle Red Bull Racing", 2005, "Christian Horner", "Austr
 array_push($equipes, $equipe4);
 
 //Cadastrar os 4 pilotos
-$piloto1 = new Piloto("Charles Leclerc", 16, $equipe1, 27, "Monegasco");
+$piloto1 = new Piloto("Charles Leclerc", 2018, 16, $equipe1, 27, "Monegasco");
 array_push($pilotos, $piloto1);
-$piloto2 = new Piloto("Lewis Hamilton", 44, $equipe2, 39, "Britânico");
+$piloto2 = new Piloto("Lewis Hamilton", 2007, 44, $equipe2, 39, "Britânico");
 array_push($pilotos, $piloto2);
-$piloto3 = new Piloto("Oscar Piastri", 81, $equipe3, 23, "Australiano");
+$piloto3 = new Piloto("Oscar Piastri", 2023 , 81, $equipe3, 23, "Australiano");
 array_push($pilotos, $piloto3);
-$piloto4 = new Piloto("Max Verstappen", 1, $equipe4, 27, "Neerlandês");
+$piloto4 = new Piloto("Max Verstappen", 2015, 1, $equipe4, 27, "Neerlandês");
 array_push($pilotos, $piloto4);
 
 //funcoes
@@ -71,8 +71,9 @@ do {
 
         case '2':
             echo "\nVocê escolheu cadastrar um Piloto.\n";
-            $piloto = new Piloto("", 0, $equipe1, 0, "");
+            $piloto = new Piloto("",0, 0, $equipe1, 0, "");
             $piloto->setNome(readline("Informe o nome do piloto: "));
+            $piloto->setAnoEntrada(readline("Informe o ano de entrada do piloto: "));
             $piloto->setNumero(readline("Informe o número do piloto: "));
             $piloto->setIdade(readline("Informe a idade do piloto: "));
             $piloto->setNacionalidade(readline("Informe a nacionalidade do piloto: "));
@@ -140,7 +141,6 @@ do {
                     echo "\n-----\n";
                     echo "Infelizmente, você perdeu a corrida devido ao segundo pit stop.\n";
                     echo "\n-----\n";
-                    $ganhou = true;
                 }
             } else {
                 // Se o 1 pit não foi bem
@@ -149,13 +149,13 @@ do {
                     echo "\n-----\n";
                     echo "Você teve uma recuperação incrível! Mas ainda assim não venceu a corrida.\n";
                     echo "\n-----\n";
-                    $ganhou = true;
+
                 } else {
                     // 1 e 2 pit foram ruins
                     echo "\n-----\n";
                     echo "Infelizmente, você perdeu a corrida com ambos os pit stops falhando.\n";
                     echo "\n-----\n";
-                    $ganhou = true;
+
                 }
             }
             break;
@@ -208,4 +208,3 @@ do {
     }
 } while ($escolha != 0 and $escolha != 7);
 
-//colocar nacionalidade na base, e talvez anoentrada tambem, reitrei pontos de base pq nao usei e retirei pneu de Corrida pq tb nao usei, e ajeitar a exibicao de equipes pq nao esta aparecendo o nome.
