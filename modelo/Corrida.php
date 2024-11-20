@@ -6,13 +6,19 @@ require_once("Base.php");
 class Corrida extends Base implements IDados {
 
     private int $voltas;
-    private int $posicao;
 
     public function getDados()
     {
-        $d = "Campeonato: \n";
-        $d .= " ";
+        $d = "Dados Pista: \n";
+        $d .= "Nome: " . $this->getNome() . " | Numero de voltas: " . $this->voltas . " | Ano de entrada: " . $this->getAnoEntrada() . " | País: " . $this->getNacionalidade() . "\n";
         return $d;
+    }
+    public function __construct($a = "", $b = 0, $c = 0, $d = "")
+    {
+        $this->nome = $a;
+        $this->voltas = $b;
+        $this->anoEntrada = $c;
+        $this->nacionalidade = $d;
     }
 
     /**
@@ -33,22 +39,4 @@ class Corrida extends Base implements IDados {
         return $this;
     }
 
-
-    /**
-     * Get the value of posicao
-     */
-    public function getPosicao(): int
-    {
-        return $this->posicao;
-    }
-
-    /**
-     * Set the value of posicao
-     */
-    public function setPosicao(int $posicao): self
-    {
-        $this->posicao = $posicao;
-
-        return $this;
-    }
 }
