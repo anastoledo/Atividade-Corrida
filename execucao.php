@@ -38,7 +38,7 @@ function realizarPitStop($tentativa)
         echo "Parabéns! O " . $tentativa . "º pit stop foi um sucesso.\n";
     } else {
         echo "\n-----\n";
-        echo "Infelizmente, o " . $tentativa . "º  pit stop não foi mal.\n";
+        echo "Infelizmente, o " . $tentativa . "º  pit stop foi mal.\n";
     }
     return $acertou;
 }
@@ -158,7 +158,7 @@ do {
                 } else {
                     // 1 e 2 pit foram ruins
                     echo "\n-----\n";
-                    echo "Infelizmente, você perdeu a corrida com ambos os pit stops falhando.\n";
+                    echo "Infelizmente, você perdeu a corrida com ambos os pit stops ruins.\n";
                     echo "\n-----\n";
 
                 }
@@ -202,7 +202,7 @@ do {
 
         case '0':
             echo "\n-----\n";
-            echo "Saindo do programa . . .";
+            echo "Saindo do programa . . .\n";
             break;
 
         default:
